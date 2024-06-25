@@ -1,0 +1,28 @@
+@import "variables";
+@import "card";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-cyan;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: $font-family;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: right 20vh bottom 45vh, left 20vh top 45vh;
+  background-repeat: no-repeat, no-repeat;
+
+  @media screen and (width >=768px) {
+    background-position: right 65vh bottom 40vh, left 65vh top 40vh;
+  }
+
+  @media screen and (width >= 1440px) {
+    background-position: right 110vh bottom 40vh, left 110vh top 40vh;
+  }
+}
